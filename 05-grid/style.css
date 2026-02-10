@@ -1,41 +1,44 @@
 /* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  padding: 20px;
+  font-family: Arial, sans-serif;/* Fuente base para toda la página */
+  background-color: #f0f0f0;/* Color de fondo suave para toda la página */
+  padding: 20px; /* Espaciado general para la página */
 }
 
-section {
-  margin-bottom: 50px;
+section { /* Estilo para cada sección de la página */
+  margin-bottom: 50px; /* Espacio entre secciones */
   background-color: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 20px; /* Espaciado interno para cada sección */
+  border-radius: 8px; /* Bordes redondeados para un diseño más suave */
 }
 
-h2 {
-  color: #333;
-  margin-top: 0;
+h2 { /* Estilo para los títulos de cada sección */
+  position: sticky; /* Hace que el título se quede fijo al hacer scroll */
+  top: 0; /* Posición en la parte superior del contenedor */
+  background-color: white; /* Fondo blanco para que el título sea legible */
+  color: #333; /* Color de texto para los títulos */
+  margin-top: 0;/* Eliminar margen superior para un mejor espaciado */
 }
 
 /* Grid Simple 3x3 */
 .grid-container-simple {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  display: grid;/* Activamos el grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+  gap: 10px; /* Espacio entre los elementos del grid */
 }
 
-.grid-item {
+.grid-item { /* Estilo para cada elemento del grid */
   background-color: #3498db;
   color: white;
   padding: 20px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  border-radius: 4px;
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center; /* Centrar el texto */
+  font-size: 24px;/* Tamaño de fuente grande */
+  font-weight: bold;/* Negrita para destacar el texto */
+  border-radius: 4px;/* Bordes redondeados */
+  min-height: 100px;/* Altura mínima para los items */
+  display: flex; /* Usamos flexbox para centrar el contenido dentro de cada item */
+  align-items: center;/* Centrado vertical */
+  justify-content: center;/* Centrado horizontal */
 }
 
 .item-1 { background-color: #e74c3c; }
@@ -49,12 +52,12 @@ h2 {
 .item-9 { background-color: #27ae60; }
 
 /* Layout de Página */
-.grid-container-page {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 15px;
-  min-height: 500px;
+.grid-container-page {/* Contenedor para el layout de página */
+  display: grid;/* Activamos el grid layout */
+  grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: navegación, contenido principal, barra lateral */
+  grid-template-rows: auto auto auto;/* Tres filas: header, contenido, footer */
+  gap: 15px; /* Espacio entre los elementos del grid */
+  min-height: 500px;/* Altura mínima para el layout de página */
 }
 
 .header {
@@ -62,110 +65,110 @@ h2 {
   background-color: #2c3e50;
   color: white;
   padding: 30px;
-  border-radius: 4px;
-  font-size: 24px;
-  font-weight: bold;
+  border-radius: 4px;/* Bordes redondeados para el header */
+  font-size: 24px;/* Tamaño de fuente grande para el título */
+  font-weight: bold;/* Negrita para destacar el título */
 }
 
-.nav {
-  grid-column: 1;
-  grid-row: 2 / 4;
+.nav { /* Estilo para la barra de navegación */
+  grid-column: 1;/* Ocupa la primera columna */
+  grid-row: 2 / 4;/* Ocupa las filas 2 y 3 */
   background-color: #34495e;
   color: white;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 4px;/* Bordes redondeados para la barra de navegación */
 }
 
-.main {
-  grid-column: 2;
-  grid-row: 2 / 4;
+.main { /* Estilo para el contenido principal */
+  grid-column: 2;/* Ocupa la segunda columna */
+  grid-row: 2 / 4;/* Ocupa las filas 2 y 3 */
   background-color: #ecf0f1;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 4px;/* Bordes redondeados para el contenido principal */
 }
 
-.sidebar {
-  grid-column: 3;
-  grid-row: 2 / 4;
+.sidebar {/* Estilo para la barra lateral */
+  grid-column: 3;/* Ocupa la tercera columna */
+  grid-row: 2 / 4;/* Ocupa las filas 2 y 3 */
   background-color: #95a5a6;
   color: white;
   padding: 20px;
   border-radius: 4px;
 }
 
-.footer {
-  grid-column: 1 / -1;
+.footer {/* Estilo para el pie de página */
+  grid-column: 1 / -1;/* Ocupa todas las columnas */
   background-color: #2c3e50;
   color: white;
   padding: 20px;
-  text-align: center;
-  border-radius: 4px;
+  text-align: center;/* Centrar el texto del pie de página */
+  border-radius: 4px;/* Bordes redondeados para el pie de página */
 }
 
 /* Grid Responsivo */
-.grid-container-responsive {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.grid-container-responsive {/* Contenedor para el grid responsivo */
+  display: grid;/* Activamos el grid layout */
+  grid-template-columns: repeat(3, 1fr);/* Tres columnas de igual tamaño por defecto */
+  gap: 20px;/* Espacio entre los elementos del grid */
 }
 
 .grid-item-resp {
   background-color: #3498db;
   color: white;
   padding: 40px;
-  text-align: center;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;/* Centrar el texto */
+  border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+  font-weight: bold;/* Negrita para destacar el texto */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra para dar profundidad */
 }
 
 /* Responsivo - tablets */
-@media (max-width: 768px) {
-  .grid-container-page {
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto auto auto;
+@media (max-width: 768px) { /* Punto de quiebre para tablets */
+  .grid-container-page { /* Ajustamos el layout de página para tablets */
+    grid-template-columns: 1fr 2fr; /* Dos columnas: navegación y contenido principal */
+    grid-template-rows: auto auto auto auto; /* Cuatro filas: header, navegación, contenido, footer */
   }
 
-  .nav {
-    grid-column: 1;
-    grid-row: 2;
+  .nav {/* Estilo para la barra de navegación en tablets */
+    grid-column: 1;/* Ocupa la primera columna */
+    grid-row: 2;/* Ocupa la segunda fila */
   }
 
-  .main {
-    grid-column: 2;
-    grid-row: 2;
+  .main {/* Estilo para el contenido principal en tablets */
+    grid-column: 2;/* Ocupa la segunda columna */
+    grid-row: 2;/* Ocupa la segunda fila */
   }
 
-  .sidebar {
-    grid-column: 1 / -1;
-    grid-row: 3;
+  .sidebar {/* Estilo para la barra lateral en tablets */
+    grid-column: 1 / -1;/* Ocupa todas las columnas */
+    grid-row: 3;/* Ocupa la tercera fila */
   }
 
-  .footer {
-    grid-row: 4;
+  .footer {/* Estilo para el pie de página en tablets */
+    grid-row: 4;/* Ocupa la cuarta fila */
   }
 
-  .grid-container-responsive {
-    grid-template-columns: repeat(2, 1fr);
+  .grid-container-responsive {/* Ajustamos el grid responsivo para tablets */
+    grid-template-columns: repeat(2, 1fr);/* Dos columnas de igual tamaño para tablets */
   }
 }
 
 /* Responsivo - móviles */
-@media (max-width: 480px) {
-  .grid-container-simple {
-    grid-template-columns: 1fr;
+@media (max-width: 480px) { /* Punto de quiebre para móviles */
+  .grid-container-simple {/* Ajustamos el grid simple para móviles */
+    grid-template-columns: 1fr;/* Una sola columna para móviles */
   }
 
-  .grid-container-page {
-    grid-template-columns: 1fr;
+  .grid-container-page {/* Ajustamos el layout de página para móviles */
+    grid-template-columns: 1fr;/* Una sola columna para móviles */
   }
 
-  .nav {
-    grid-column: 1;
-    grid-row: 2;
+  .nav {/* Estilo para la barra de navegación en móviles */
+    grid-column: 1;/* Ocupa la primera columna */
+    grid-row: 2;/* Ocupa la segunda fila */
   }
 
-  .main {
+  .main {/* Estilo para el contenido principal en móviles */
     grid-column: 1;
     grid-row: 3;
   }
@@ -178,8 +181,10 @@ h2 {
   .footer {
     grid-row: 5;
   }
-
-  .grid-container-responsive {
-    grid-template-columns: 1fr;
+ 
+  .grid-container-responsive { /* Ajustamos el grid responsivo para móviles */
+    grid-template-columns: 1fr;/  
   }
+  
 }
+
