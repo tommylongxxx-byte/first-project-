@@ -1,0 +1,9 @@
+ notas para git
+ configuracion;
+ 
+
+como saber si tengo instalado git?
+abro terminal < control, shift, `>
+escribir git <si sale informacion significa que ya esta instalado >
+de ahi configuro nombre y correo
+despues de clonar el proyecto busco la carpeta del proyecto clonado y voy hacia ella en el terminal 

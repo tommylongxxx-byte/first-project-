@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <a href="#home">Inicio</a>
+    <a href="#about">Acerca de</a>
+    <a href="#services">Servicios</a>
+    <a href="#portfolio">Portafolio</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+
+  <!-- Layout de tarjetas -->
+  <section class="cards-container">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Diseño</h3>
+        <p>Diseño web moderno y atractivo.</p>
+      </div>
+      <div class="card">
+        <h3>Desarrollo</h3>
+        <p>Desarrollo de aplicaciones web.</p>
+      </div>
+      <div class="card">
+        <h3>Marketing</h3>
+        <p>Estrategias de marketing digital.</p>
+      </div>
+      <div class="card">
+        <h3>SEO</h3>
+        <p>Optimización para motores de búsqueda.</p>
+      </div>
+      <div class="card">
+        <h3>Análisis</h3>
+        <p>Análisis de datos y métricas.</p>
+      </div>
+      <div class="card">
+        <h3>Soporte</h3>
+        <p>Soporte técnico 24/7.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Layout de dos columnas -->
+  <div class="main-layout">
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <ul>
+        <li><a href="#">Enlace 1</a></li>
+        <li><a href="#">Enlace 2</a></li>
+        <li><a href="#">Enlace 3</a></li>
+      </ul>
+    </aside>
+    
+    <main class="content">
+      <h2>Contenido Principal</h2>
+      <p>Este es el contenido principal. El layout usa Flexbox para distribuir el espacio.</p>
+      <p>El sidebar ocupa el 25% y el contenido principal ocupa el espacio restante.</p>
+    </main>
+  </div>
+</body>
+</html>

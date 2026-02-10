@@ -1,0 +1,74 @@
+:root {  
+    --primary-color: #4095ef;  
+    --secondary-color: #b4dce5;  
+    --text-color: #e5e9ea;  
+    --new-color: #ff5733;
+    --tree-color: #e01890;
+    --four-color: #d1ee2d;
+    --th-color: #f67402;
+}
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: var(--primary-color);  
+    margin: 0;  
+    padding: 32px;  
+} 
+h1 {  
+    color: var(--text-color);  
+    text-align: center;  
+}
+p {  
+    color: var(--secondary-color);  
+    font-size: 16px;  
+    line-height: 1.6;  
+}  
+ul {  
+    color: var(--text-color);
+    list-style-type: square;  
+    padding-left: 20px;  
+} 
+
+table {  
+    width: 100%;  
+    border-collapse: collapse;  
+    margin-top: 20px;  
+
+}
+.tabla th {
+    background-color: var(--th-color);  
+}
+.tabla td {
+    background-color: var(--new-color);  
+}
+table.tabla-secundaria th{  
+    background-color: var(--th-color);  
+}
+table.tabla-secundaria td {  
+    background-color: var(--secondary-color); 
+ 
+}
+table.tabla-terciaria th {  
+    background-color: var(--th-color);    
+}  
+table.tabla-terciaria td {  
+    background-color: var(--tree-color);    
+}
+th{  
+    border: 1px solid var(--text-color);  
+    padding: 8px;  
+    text-align: left;  
+    background-color: var(--th-color);  
+}    
+td {  
+    border: 1px solid var(--text-color);  
+    padding: 8px;  
+    text-align: left;
+    background-color: var(--secondary-color);
+
+}  
+.tabla-cuaternaria th {
+    background-color: var(--th-color);  
+} 
+.tabla-cuaternaria td {
+    background-color: var(--four-color);  
+}

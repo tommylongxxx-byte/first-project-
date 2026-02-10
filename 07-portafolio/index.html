@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio - David</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header y Navegación -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">David Dev</div>
+      <nav class="nav" id="nav">
+        <a href="#about" class="nav-link">Acerca de</a>
+        <a href="#skills" class="nav-link">Habilidades</a>
+        <a href="#projects" class="nav-link">Proyectos</a>
+        <a href="#contact" class="nav-link">Contacto</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Hola, soy David</h1>
+      <p class="hero-subtitle">Desarrollador Web & Estudiante de IA</p>
+      <p class="hero-description">Apasionado por crear soluciones web modernas y explorar el mundo de la inteligencia artificial.</p>
+      <a href="#contact" class="cta-button">Contáctame</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Acerca de mí</h2>
+      <p>Soy un desarrollador web en formación con pasión por aprender nuevas tecnologías. Tengo experiencia en HTML, CSS y JavaScript, y actualmente estoy explorando el mundo del desarrollo web y la inteligencia artificial.</p>
+      <p>Mi objetivo es convertirme en un desarrollador full-stack competente y aplicar mis conocimientos en proyectos reales que hagan una diferencia.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <ul>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>Git & GitHub</li>
+            <li>SQL Básico</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Herramientas</h3>
+          <ul>
+            <li>VS Code</li>
+            <li>DevTools</li>
+            <li>Git/GitHub</li>
+            <li>Jupyter</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Mis Proyectos</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Gestor de Tareas CLI</h3>
+          <p>Aplicación de línea de comandos para gestionar tareas con almacenamiento en JSON.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">JSON</span>
+          </div>
+          <a href="#" class="project-link">Ver más →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Portafolio Web</h3>
+          <p>Sitio web responsivo que muestra mis proyectos y habilidades.</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Responsive</span>
+          </div>
+          <a href="#" class="project-link">Ver más →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Análisis de Datos</h3>
+          <p>Proyecto de análisis exploratorio de datos con Python y pandas.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Matplotlib</span>
+          </div>
+          <a href="#" class="project-link">Ver más →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contáctame</h2>
+      <p>¿Interesado en colaborar? ¡Me encantaría hablar contigo!</p>
+      
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Enviar Mensaje</button>
+      </form>
+
+      <div class="social-links">
+        <a href="#" title="GitHub">GitHub</a>
+        <a href="#" title="LinkedIn">LinkedIn</a>
+        <a href="#" title="Twitter">Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 David. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Menú hamburguesa
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('nav').classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer clic en un link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('nav').classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
