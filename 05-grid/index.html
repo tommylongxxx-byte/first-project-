@@ -20,7 +20,7 @@
       <div class="grid-item item-7">7</div>
       <div class="grid-item item-8">8</div>
       <div class="grid-item item-9">9</div>
-    </div>
+    </div> 
   </section>
 
   <!-- Layout de página completo -->
@@ -52,23 +52,80 @@
     <div class="grid-container-simple" id="grid-redes">
     </div>
   </section>
+  <section class="carousel-section">
+  <h2>Mi Carrusel Dinámico</h2>
+  <div id="carousel-items">
+    </div>
+</section>
   <script>
-    const camilo = "9"; //string 
-    const number = 9; //number
-    const booleano = true; //boolean
-    const booleano2 = false; //boolean
-    console.log(`El número de la suerte de Camilo es: ${camilo}`);
-    const frutas = ["manzana", "banana", "naranja"]; 
-    const numeros = [1, 2, 3, 4, 5];
+    
+    const redesSociales = [
+      {nombre: "Facebook", url: "https://www.facebook.com", icon: "https://cdn-icons-png.flaticon.com/512/733/733547.png"},
+      {nombre: "Twitter", url: "https://www.twitter.com", icon: "https://cdn-icons-png.flaticon.com/512/733/733548.png"},
+      {nombre: "Instagram", url: "https://www.instagram.com", icon: "https://cdn-icons-png.flaticon.com/512/733/733549.png"},
+      {nombre: "LinkedIn", url: "https://www.linkedin.com", icon: "https://cdn-icons-png.flaticon.com/512/174/174857.png"},
+      {nombre: "TikTok", url: "https://www.tiktok.com", icon: "https://cdn-icons-png.flaticon.com/512/3046/3046120.png"},
+      {nombre: "YouTube", url: "https://www.youtube.com", icon: "https://cdn-icons-png.flaticon.com/512/1384/1384060.png"},
+      {nombre: "Pinterest", url: "https://www.pinterest.com", icon: "https://cdn-icons-png.flaticon.com/512/733/733558.png"},
+      {nombre: "Snapchat", url: "https://www.snapchat.com", icon: "https://cdn-icons-png.flaticon.com/512/733/733559.png"},
+      {nombre: "Reddit", url: "https://www.reddit.com", icon: "https://cdn-icons-png.flaticon.com/512/733/733560.png"},
+    ];
+
+    const gridRedes = document.getElementById("grid-redes"); // Obtener el contenedor del grid para las redes sociales
+    redesSociales.forEach((red, index) => { // Iterar sobre cada red social en el array
+      const redSocial = document.createElement("div"); // Crear un contenedor para cada red social
+      redSocial.classList.add("grid-item"); // Agregar clase común para el estilo del grid
+      redSocial.classList.add(`item-${index + 1}`); // Agregar clase específica para cada red social
+      const icon = document.createElement("img"); // Crear un elemento de imagen para el ícono de la red social
+      icon.src = red.icon; // Establecer la fuente de la imagen al ícono de la red social
+      icon.alt = red.nombre; // Establecer el texto alternativo para la imagen con el nombre de la red social
+      icon.className = "icon-redes"; // Agregar clase para el estilo del ícono
+      redSocial.appendChild(icon); // Agregar el ícono al contenedor de la red social
+      gridRedes.appendChild(redSocial); // Agregar el contenedor de la red social al grid
+      const link = document.createElement("a"); // Crear un elemento de enlace para la red social
+      link.href = red.url; // Establecer el atributo href del enlace a la URL de la red social
+      link.target = "_blank"; // Abrir el enlace en una nueva pestaña
+      link.rel = "noopener noreferrer"; // Agregar atributos de seguridad para el enlace
+     redSocial.appendChild(link); // Agregar el enlace al contenedor de la red social
+     link.appendChild(icon); // Agregar el ícono dentro del enlace para que sea clicable
+ 
+    })
+
+    
  
 
-    const suma = 5 + 12;
-    let resultado = suma * 2;
-    // console.log(`La suma de 5 y 10 es: ${suma}`);
+    
      
 
+   const carousel = {
+    items: [
+      {id: 1, title: "Naturaleza", image: "https://picsum.photos/id/10/150/150"},
+      {id: 2, title: "Ciudad", image: "https://picsum.photos/id/20/150/150"},
+      {id: 3, title: "Tecnología", image: "https://picsum.photos/id/30/150/150"},
+      {id: 4, title: "Montañas", image: "https://picsum.photos/id/40/150/150"},
+      {id: 5, title: "Mar", image: "https://picsum.photos/id/50/150/150"},
+    ]
+
+   }
+   const carouselitems = document.getElementById("carousel-items");
+   carousel.items.forEach ((item) => {
+    const carouselItem = document.createElement("div");
+    carouselItem.classList.add("carousel-item");
+    const link = document.createElement("a");
+    link.href = item.image;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    const image = document.createElement("img");
+    image.src = item.image;
+    link.appendChild(image);
+    carouselItem.appendChild(link);
+    carouselitems.appendChild(carouselItem); 
+   const tittle = document.createElement("p");
+   tittle.textContent = item.title;
+   carouselItem.appendChild(tittle);
 
 
+})
     //en script pueden haber const(variable que no puede mutar )
     //  en script  cada constante tiene un tipo de datos diferente (string, number, boolean) y se pueden usar para almacenar información y realizar operaciones.
     // tipo de dato complejo no primitivo (array, objeto) se pueden usar para almacenar colecciones de datos o estructuras más complejas.

@@ -112,7 +112,7 @@ h2 { /* Estilo para los títulos de cada sección */
   gap: 20px;/* Espacio entre los elementos del grid */
 }
 
-.grid-item-resp {
+.grid-item-resp { /* Estilo para cada elemento del grid responsivo */
   background-color: #3498db;
   color: white;
   padding: 40px;
@@ -121,6 +121,31 @@ h2 { /* Estilo para los títulos de cada sección */
   font-weight: bold;/* Negrita para destacar el texto */
   box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra para dar profundidad */
 }
+
+.icon-redes {
+  width: 40px; /* Tamaño de los íconos de redes sociales */
+  height: 40px;
+  object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+}
+
+#carousel-items { /* Contenedor para el carrusel de imágenes */
+  display: grid; /* Usamos grid para el carrusel */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Columnas responsivas para el carrusel */
+  gap: 10px; /* Espacio entre los items del carrusel */
+  padding: 20px; /* Espaciado interno para el carrusel */
+}
+
+.carousel-item img { /* Estilo para las imágenes dentro del carrusel */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s; /* Un toque extra para que se mueva al pasar el mouse */
+}
+.carousel-item img:hover { /* Efecto al pasar el mouse sobre las imágenes del carrusel */
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+
 
 /* Responsivo - tablets */
 @media (max-width: 768px) { /* Punto de quiebre para tablets */
@@ -178,13 +203,15 @@ h2 { /* Estilo para los títulos de cada sección */
     grid-row: 4;
   }
 
-  .footer {
-    grid-row: 5;
+  .footer { /* Estilo para el pie de página en móviles */
+    grid-row: 5; /* Asegura que el footer esté al final en móviles */
   }
  
   .grid-container-responsive { /* Ajustamos el grid responsivo para móviles */
-    grid-template-columns: 1fr;/  
+    grid-template-columns: 1fr;/  /* Una sola columna para móviles */
   }
+
+
   
 }
 
