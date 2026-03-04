@@ -129,10 +129,22 @@ h2 { /* Estilo para los títulos de cada sección */
 }
 
 #carousel-items { /* Contenedor para el carrusel de imágenes */
-  display: grid; /* Usamos grid para el carrusel */
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Columnas responsivas para el carrusel */
+  display: flex; /* Usamos flexbox para el carrusel */
+  overflow-x: auto; /* Permite desplazamiento horizontal */
+  scroll-behavior: smooth; /* Suaviza el desplazamiento al hacer scroll */
   gap: 10px; /* Espacio entre los items del carrusel */
   padding: 20px; /* Espaciado interno para el carrusel */
+  white-space: nowrap; /* Evita que los items del carrusel se envuelvan a la siguiente línea */ 
+  -ms-overflow-style: none; /* Oculta la barra de desplazamiento en Internet Explorer 10+ */
+  scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+}
+
+#carousel-items::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento en navegadores WebKit */
+}
+.carousel-item {
+  flex:0 0 200px; /* Cada item del carrusel ocupa un ancho fijo */  
+  text-align:center;
 }
 
 .carousel-item img { /* Estilo para las imágenes dentro del carrusel */
