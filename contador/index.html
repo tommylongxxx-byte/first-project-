@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contador">
+        <h1>Contador</h1>
+        <p id="count">0</p>
+        <button id="increment">Incrementar</button>
+        <button id="decrement">Decrementar</button>
+        <button id="reset">Reiniciar</button>
+    </div>
+    <script>
+        let contador = 0;
+        const countElement = document.getElementById('count');
+        const incrementButton = document.getElementById('increment');
+        const decrementButton = document.getElementById('decrement');
+        const resetButton = document.getElementById('reset');
+        incrementButton.addEventListener('click', () => {
+            contador++;
+            countElement.textContent = contador;
+        });
+        decrementButton.addEventListener('click', () => {
+            contador--;
+            countElement.textContent = contador;
+        });
+        resetButton.addEventListener('click', () => {
+            contador = 0;           
+            countElement.textContent = contador;
+        });
+    </script>
+    
+</body>
+   
+</html>
