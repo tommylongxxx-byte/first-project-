@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contador">
+        <h1>Contador</h1>
+        <p id="count">0</p>
+        <button onclick= "incrementButton()">Incrementar</button>
+        <button onclick="decrementButton()">Decrementar</button>
+        <button id="reset" disabled onclick="resetButton()">Reiniciar</button>
+    </div>
+    <div id="modal">    
+        <h1>acepta el valor negativo ?</h1>
+        <button onclick="acceptedButton()">Aceptar</button>
+        <button onclick="cancelButton()">Cancelar</button>
+
+
+    </div>
+    <script>
+        let contador = 0;
+        const countElement = document.getElementById('count');
+
+        const incrementButton = () => {
+            contador++;
+            countElement.textContent = contador;
+            if (contador >= 0) {
+                countElement.style.color ="green";
+                console.log("valor de incrementButton if", contador);
+            } else {
+                countElement.style.color ="red";
+                console.log("valor de incrementButton else", contador);
+            }
+            disabledResetButton();
+            
+        };
+
+        const decrementButton = () => {
+            if (contador != 0) {
+                console.log("valor de contdor", contador);
+                contador--;
+                countElement.textContent = contador;
+                if (contador >= 0) {
+                    countElement.style.color ="green";
+                } else {
+                    countElement.style.color ="red";
+                }
+                console.log("valor de decrementButton if", contador);
+            }
+            else if (contador <= 0) {
+                console.log('es negativo 2', contador);
+                const modal = document.getElementById('modal');
+                modal.style.display = 'block'; // Muestra el modal
+                console.log("valor de decrementButton else", contador);
+            } 
+            disabledResetButton();
+            
+        };
+
+        const resetButton = () => {
+            contador = 0;           
+            countElement.textContent = contador;
+            countElement.style.color ="black";
+                console.log("valor de resetButton", contador);
+                disabledResetButton();
+
+        };
+         
+        const  disabledResetButton = () => {
+            const resetButton = document.getElementById('reset');
+            if (contador === 0) {
+                resetButton.disabled = true;
+                console.log("valor de resetButton if", contador);
+            } else {
+                resetButton.disabled = false;
+                console.log("valor de resetButton else", contador);
+            }
+            
+        };
+
+        const acceptedButton = () => {
+            modal.style.display ='none';
+            contador--;
+            countElement.textContent = contador;
+            if (contador >= 0) {
+                    countElement.style.color ="green";
+                    console.log("valor de acceptedButton if", contador);
+                } else {
+                    countElement.style.color ="red";
+                    console.log("valor de acceptedButton", contador);
+                }
+            disabledResetButton();
+            
+        };
+
+        const cancelButton = () => {
+            modal.style.display ='none';
+            console.log("valor de cancelButton", contador);
+        };
+
+    </script>
+
+    <style>
+        #modal {
+            display: none;
+        }
+    </style>
+
+
+
+</body>
+   
+</html>
